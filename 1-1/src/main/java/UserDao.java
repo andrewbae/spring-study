@@ -3,9 +3,11 @@ import java.sql.*;
 public class UserDao {
 
     public void add(User user) throws ClassNotFoundException, SQLException {
-        Class.forName("com.mysql.jdbc.Driver");
-        Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://localhost/springstudy?verifyServerCertificate=false&useSSL=true", "springstudy", "springstudy");
+//        Class.forName("com.mysql.jdbc.Driver");
+//        Connection conn = DriverManager.getConnection(
+//                "jdbc:mysql://localhost/springstudy?verifyServerCertificate=false&useSSL=true", "springstudy", "springstudy");
+
+        Connection conn = getConnection();
 
         PreparedStatement ps = conn.prepareStatement("insert into users_tb(id, name, pwd) values(?, ?, ?)");
         ps.setString(1, user.getId());
@@ -19,9 +21,11 @@ public class UserDao {
     }
 
     public User get(String id) throws ClassNotFoundException, SQLException {
-        Class.forName("com.mysql.jdbc.Driver");
-        Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://localhost/springstudy?verifyServerCertificate=false&useSSL=true", "springstudy", "springstudy");
+//        Class.forName("com.mysql.jdbc.Driver");
+//        Connection conn = DriverManager.getConnection(
+//                "jdbc:mysql://localhost/springstudy?verifyServerCertificate=false&useSSL=true", "springstudy", "springstudy");
+
+        Connection conn = getConnection();
 
         PreparedStatement ps = conn.prepareStatement("select * from users_tb where id = ?");
         ps.setString(1, id);
@@ -39,5 +43,13 @@ public class UserDao {
         conn.close();
 
         return user;
+    }
+
+    private Connection getConnection() throws ClassNotFoundException, SQLException {
+        Class.forName("com.mysql.jdbc.Driver");
+        Connection conn = DriverManager.getConnection(
+                "jdbc:mysql://localhost/springstudy?verifyServerCertificate=false&useSSL=true", "springstudy", "springstudy");
+
+        return conn;
     }
 }
