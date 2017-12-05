@@ -45,6 +45,12 @@ public class UserDao {
         return user;
     }
 
+    /**
+     * jdbc 커넥션 가져오기
+     * @return Connection
+     * @throws ClassNotFoundException
+     * @throws SQLException
+     */
     private Connection getConnection() throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.jdbc.Driver");
         Connection conn = DriverManager.getConnection(
