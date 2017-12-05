@@ -1,6 +1,6 @@
 import java.sql.*;
 
-public class UserDao {
+public abstract class UserDao {
 
     public void add(User user) throws ClassNotFoundException, SQLException {
 //        Class.forName("com.mysql.jdbc.Driver");
@@ -51,11 +51,5 @@ public class UserDao {
      * @throws ClassNotFoundException
      * @throws SQLException
      */
-    private Connection getConnection() throws ClassNotFoundException, SQLException {
-        Class.forName("com.mysql.jdbc.Driver");
-        Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://localhost/springstudy?verifyServerCertificate=false&useSSL=true", "springstudy", "springstudy");
-
-        return conn;
-    }
+    public abstract Connection getConnection() throws ClassNotFoundException, SQLException;
 }
