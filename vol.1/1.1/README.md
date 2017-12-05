@@ -7,9 +7,9 @@
 
 ## 파일 구성
 
-- `User.class` 사용자 정보를 저장할 자바빈 클래스
-- `UserDao.class` 사용자 정보를 DB와 연동하여 관리해주는 DAO 클래스
-- `UserDaoTest.class` 기본 테스트 코드
+- `User.java` 사용자 정보를 저장할 자바빈 클래스
+- `UserDao.java` 사용자 정보를 DB와 연동하여 관리해주는 DAO 클래스
+- `UserDaoTest.java` 기본 테스트 코드
 
 ## 참고 사항
 
