@@ -1,9 +1,8 @@
 import java.sql.SQLException;
 
 public class UserDaoTest {
-
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
-        XUserDao dao = new XUserDao();
+        UserDao dao = new UserDao();
 
         User user = new User();
         user.setId("andrewbae");
