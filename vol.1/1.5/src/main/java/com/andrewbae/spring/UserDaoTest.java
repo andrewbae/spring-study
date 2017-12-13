@@ -11,7 +11,9 @@ import java.sql.SQLException;
 public class UserDaoTest {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
 
+        // DaoFactory를 설정정보로 사용하는 애플리케이션 컨텍스트 생성.
         ApplicationContext ctx = new AnnotationConfigApplicationContext(DaoFactory.class);
+        // userDao bean을 가져온다.
         UserDao dao = ctx.getBean("userDao", UserDao.class);
 
         User user = new User();
