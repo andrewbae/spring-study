@@ -6,7 +6,7 @@
 
 ## 1. HTTP 메소드 (HTTP Method)
 |메소드|요청 Body 유무|응답 Body 유무|캐시 가능|
-|---|---|---|---|---|---|
+|---|---|---|---|---|
 |GET|N|Y|Y|
 |POST|Y|Y|Y|
 |PUT|Y|Y|N|
@@ -31,9 +31,3 @@
 - HTTP 상태 코드 (상태 코드 포함)
 
 #### 2.2.1. HTTP 상태 코드
-| First Header  | Second Header | Third Header         |
-| :------------ | :-----------: | -------------------: |
-| First row     | Data          | Very long data entry |
-| Second row    | **Cell**      | *Cell*               |
-| Third row     | Cell that spans across two columns  ||
-[Table caption, works as a reference][section-mmd-tables-table1]
