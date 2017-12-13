@@ -28,9 +28,9 @@
 
 ### 2.2. 응답 메시지 (Response)
 - HTTP 프로토콜 버전
-- [HTTP 상태 코드 (상태 코드 포함)](####2.2.1-주요-HTTP-상태-코드)
+- [HTTP 상태 코드 (상태 코드 포함)](####주요-HTTP-상태-코드)
 
-#### 2.2.1. 주요 HTTP 상태 코드
+#### 주요 HTTP 상태 코드
 참고 : https://developer.mozilla.org/ko/docs/Web/HTTP/Status
 
 |Code|Message|Description|
